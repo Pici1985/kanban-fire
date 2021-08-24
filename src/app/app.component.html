@@ -7,10 +7,13 @@
 
 <div class="content-wrapper">
   <!--button ide 11:10nel -->
+  <button mat-button (click)="newTask()">
+    <mat-icon>add</mat-icon> Add Task  
+  </button>
   <div class="container-wrapper">
     <div class="container">
       <h2>Backlog:</h2>
-      <mat-card cdkDropList id="todo" #todoList="cdkDropList" [cdkDropListData]="todo" (cdkDropListDropped)="drop($event)"        [cdkDropListConnectedTo]="[inProgressList, doneList]">
+      <mat-card cdkDropList id="todo" #todoList="cdkDropList" [cdkDropListData]="todo" (cdkDropListDropped)="drop($event)" [cdkDropListConnectedTo]="[inProgressList, doneList]">
         <p class="empty-label" *ngIf="todo.length === 0">Empty List</p>
         <app-task cdkDrag *ngFor="let task of todo" [task]="task" (edit)="edit('todo', $event)"></app-task>
       </mat-card>

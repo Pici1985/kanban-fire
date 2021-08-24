@@ -10,7 +10,11 @@ import { Task } from './task';
 export class TaskComponent implements OnInit {
 
   @Input() task: any;
-  // itt lehet van bibi
+  // itt lehet van egy bibi
+  /* @Input()
+  set task(t:Task){
+    this.task = t;
+  }  */
 
   @Output() edit = new EventEmitter();
 
