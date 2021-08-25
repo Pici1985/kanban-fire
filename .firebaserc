@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "kanban-fire-workshop-a40c8": {
+      "hosting": {
+        "kanban-fire": [
+          "kanban-fire-workshop-a40c8"
+        ]
+      }
+    }
+  }
+}
